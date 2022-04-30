@@ -8,7 +8,7 @@ export default class Start extends React.Component {
     super(props);
 
     this.state = {
-      name: "",
+      name: '',
       backgroundColor: this.colors.black,
     };
   }
@@ -53,7 +53,7 @@ export default class Start extends React.Component {
 
           {/* Open the chatroom with username and background color as props */}
           <Pressable style={styles.button} onPress={() => this.props.navigation.navigate(
-            "Chat", { name: this.state.name, backgroundColor: this.state.backgroundColor, }
+            'Chat', { name: this.state.name, backgroundColor: this.state.backgroundColor, }
             )}
           >
             <Text style={styles.buttonText}>Start Chatting</Text>
@@ -141,7 +141,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-
   buttonText: {
     color: '#ffffff',
     fontSize: 16,
