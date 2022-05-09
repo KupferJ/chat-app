@@ -13,8 +13,9 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 const Stack = createStackNavigator();
 
-export default function App () {
-  return (
+export default class App extends React.Component {
+  render() {
+    return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Start" >
         <Stack.Screen name="Start" component={Start} />
@@ -23,4 +24,4 @@ export default function App () {
     </NavigationContainer>
   );
 }
-
+}
