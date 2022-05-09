@@ -21,11 +21,11 @@ and location data. <br/>
 ## Installation
 
 ### Requirements
-● Node.js, npm
-● Expo
-● Android/iOs Simulator/Emulator / "Expo Go" on a physical device
+● Node.js, npm  <br/>
+● Expo  <br/>
+● Android/iOs Simulator/Emulator / "Expo Go" on a physical device  <br/>
 
 ### Rundown
-● fork the repository and install dependencies via ```npm install``` in the project's root folder
-● run the command ```expo start``` or ```npm start```
+● fork the repository and install dependencies via ```npm install``` in the project's root folder  <br/>
+● run the command ```expo start``` or ```npm start```  <br/>
 ● follow the presented steps to run the application on an emulator, or scan the QR code directly with your smartphone (iOs) or by using the Expo Go App's scan feature (Android)
