@@ -1,6 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { ImageBackground, StyleSheet, Text, TextInput, View, TouchableOpacity, Pressable } from 'react-native';
+import { ImageBackground,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
+  TouchableOpacity,
+  Pressable,
+  Image,
+ } from 'react-native';
 import BackgroundImage from '../assets/background-image.png';
+import userIcon from '../assets/icon.png';
 
 
 export default class Start extends React.Component {
@@ -31,11 +40,13 @@ export default class Start extends React.Component {
         <ImageBackground source={ BackgroundImage } style={styles.bgImage}>
         
         <Text style={styles.title}>Chat-App</Text>
+        <View style={styles.inputBoxOuter}>
         <View style={styles.inputBox}>
-
-        <TextInput style={styles.inputField} onChangeText={(text) => this.setState({ name: text })} value={this.state.name}
-          placeholder='Your name ...'
-        />
+          <Image source={userIcon} style={styles.userIcon} />
+          <TextInput style={styles.inputField} onChangeText={(text) => this.setState({ name: text })} value={this.state.name}
+            placeholder='Your name ...'
+          />
+        </View>
         <Text style={styles.bgText}>Choose Background Color:</Text>
           <View style={styles.colorContainer}>
             <TouchableOpacity style={styles.bgBlack} onPress={() => this.changeBackgroundColor(this.colors.black)}>
@@ -80,23 +91,36 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     color: '#ffffff',
   },
-  inputBox: {
-    width: '88%',
-    backgroundColor: 'white',
-    alignItems: 'center',
-    height: '44%',
-    justifyContent: 'space-evenly',
+  inputBoxOuter: {
+    backgroundColor: "white",
+    height: "46%",
+    width: "88%",
+    justifyContent: "space-around",
+    alignItems: "center",
   },
+
+  inputBox: {
+    borderWidth: 2,
+    borderRadius: 1,
+    borderColor: "grey",
+    width: "88%",
+    height: 60,
+    paddingLeft: 20,
+    flexDirection: "row",
+    alignItems: "center",
+  },
+
+  userIcon: {
+    width: 20,
+    height: 20,
+    marginRight: 10,
+  },
+
   inputField: {
-    height: 40,
-    width: '88%',
-    opacity: .5,
     fontSize: 16,
-    fontWeight: '300',
-    color: '#757083',
-    borderColor: 'gray',
-    borderWidth: 1,
-    paddingHorizontal: 15,
+    fontWeight: "300",
+    color: "#757083",
+    opacity: 0.5,
   },
   bgText: {
     color: '#757083',
